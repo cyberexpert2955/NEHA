@@ -1,0 +1,1997 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Sister's Day! - A Heartfelt Tribute</title>
+  <!-- Google Fonts for beautiful typography -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Open+Sans:wght@300;400;700&family=Pacifico&family=Montserrat:wght@300;400;700&family=Great+Vibes&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+  
+  <style>
+    /*
+     * Global Variables & Base Styles
+     * Defines the core color palette, typography, and common spacing/shadows.
+     * These variables ensure consistency and easy modification of the theme,
+     * aiming for a sophisticated, "mate finished" aesthetic with neon accents.
+     */
+    :root {
+      /* Color Palette - Muted and Sophisticated Tones with Neon Accents */
+      --primary-pink: #e9a3b9; /* Muted Rose */
+      --secondary-pink: #d47a96; /* Deeper Rose */
+      --bright-pink: #f0c2d0; /* Soft Blush */
+      --accent-purple: #a084c0; /* Muted Lavender */
+      --soft-purple: #c9b8d8; /* Pale Lilac */
+      --light-blue: #d0e0ed; /* Powder Blue */
+      --light-pink: #f5e6eb; /* Pale Rose */
+      --soft-peach: #fce8d6; /* Creamy Peach */
+      --text-dark: #5a5a5a; /* Soft Charcoal */
+      --dark-grey: #707070; /* Medium Grey */
+      --text-light: #fff; /* Standard light text */
+      --light-text-alt: #f8f9fa; /* Off-white for card backgrounds */
+      --border-light-grey: #e0e0e0; /* Light grey for subtle borders */
+      --shadow-subtle: rgba(0, 0, 0, 0.05); /* Even lighter shadow */
+
+      /* Neon Accent Colors */
+      --neon-purple: #b39ddb; /* Lighter, more vibrant lavender */
+      --neon-sky-blue: #81d4fa; /* Lighter, vibrant sky blue */
+      --neon-pink: #ff80ab; /* Brighter, vibrant pink */
+      --neon-green: #a7ffeb; /* New: Vibrant Green for pop-up */
+      --neon-yellow: #ffff8d; /* New: Vibrant Yellow for pop-up */
+
+      /* Card & Shadow Properties - Soft and Diffused */
+      --card-bg: rgba(255, 255, 255, 0.95); /* Slightly more opaque, softer white */
+      --card-border: #e0d0d5; /* Subtle, desaturated border */
+      --shadow-light: rgba(0, 0, 0, 0.08); /* Very light, diffused shadow */
+      --shadow-medium: rgba(0, 0, 0, 0.15); /* More diffused shadow for depth */
+      --shadow-hover: rgba(220, 150, 170, 0.4); /* Soft, pink-tinted, diffused hover shadow, slightly stronger */
+      --shadow-deep: rgba(0, 0, 0, 0.25); /* Deeper shadow for contrast */
+
+      /* Gradients - Subtle and Blended, now with neon color changing effect */
+      --gradient-bg: linear-gradient(135deg, var(--neon-sky-blue) 0%, var(--neon-pink) 50%, var(--neon-purple) 100%);
+      --gradient-card-hover: linear-gradient(45deg, var(--primary-pink), var(--secondary-pink), var(--accent-purple));
+      --gradient-button: linear-gradient(to right, var(--primary-pink), var(--secondary-pink));
+      --gradient-button-hover: linear-gradient(to right, var(--secondary-pink), var(--primary-pink));
+      --gradient-section-bg: linear-gradient(160deg, var(--light-pink) 0%, var(--soft-peach) 50%, var(--light-blue) 100%); /* New subtle gradient for sections */
+      --gradient-popup-border: linear-gradient(45deg, var(--neon-green), var(--neon-yellow), var(--neon-sky-blue)); /* New: Pop-up border gradient */
+
+      /* Typography - Elegant and Readable */
+      --font-dancing-script: 'Dancing Script', cursive;
+      --font-open-sans: 'Open Sans', sans-serif;
+      --font-montserrat: 'Montserrat', sans-serif;
+      --font-great-vibes: 'Great Vibes', cursive; /* For signatures/special text */
+      --font-playfair-display: 'Playfair Display', serif; /* For elegant body text */
+
+      --font-size-base: 1rem;
+      --line-height-base: 1.7;
+
+      /* Spacing & Border Radii - Clean and Consistent */
+      --spacing-unit: 1rem;
+      --border-radius-small: 0.5rem;
+      --border-radius-medium: 1rem;
+      --border-radius-large: 1.5rem;
+      --border-radius-xl: 2rem;
+      --border-radius-circle: 50%;
+
+      /* Transitions - Smooth and Purposeful */
+      --transition-fast: 0.2s ease-out;
+      --transition-medium: 0.4s ease-in-out;
+      --transition-slow: 0.7s ease-in-out;
+      --transition-extra-slow: 1.2s ease-in-out; /* For more dramatic fades */
+    }
+
+    /*
+     * Base HTML Element Styling
+     * Provides default styles for common elements to ensure consistency.
+     */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth; /* Smooth scrolling for anchor links */
+    }
+
+    body {
+      font-family: var(--font-open-sans);
+      background: var(--gradient-bg), 
+                  url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAQAAAAECAYAAACp8Hn3AAAAAXNSR0IArs4c6QAAAB9JREFUGFdjZGBgYGBgYGBgYGBgYGBgYGBgYGBgAAAB9wB+Gg0+AAAAAElFTSuQmCC') repeat; /* Subtle noise texture */
+      background-attachment: fixed; /* Parallax-like effect for background */
+      color: var(--text-dark);
+      text-align: center;
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow-x: hidden; /* Prevents horizontal scroll */
+      transition: background 1s ease-in-out;
+      line-height: var(--line-height-base);
+      font-size: var(--font-size-base);
+      /* Reverted to original SVG cursor for a single pink heart */
+      cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="%23e9a3b9" d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') 12 12, auto;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+      font-family: var(--font-dancing-script);
+      color: var(--primary-pink);
+      margin-top: 0;
+      margin-bottom: 0.5em;
+      line-height: 1.2;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.1); /* Slightly stronger shadow */
+    }
+
+    p {
+      font-family: var(--font-playfair-display);
+      color: var(--text-dark);
+      margin-bottom: 1em;
+    }
+
+    a {
+      color: var(--accent-purple);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+
+    a:hover {
+      color: var(--secondary-pink);
+      text-decoration: underline;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.5em;
+    }
+
+    blockquote {
+      margin: 1.5em 0;
+      padding: 1em 1.5em;
+      border-left: 4px solid var(--bright-pink);
+      background-color: var(--light-text-alt);
+      border-radius: var(--border-radius-small);
+      font-style: italic;
+      color: var(--dark-grey);
+      box-shadow: inset 0 0 8px rgba(0,0,0,0.05);
+    }
+
+    blockquote p {
+      margin-bottom: 0.5em;
+    }
+
+    blockquote footer {
+      font-size: 0.9em;
+      text-align: right;
+      color: var(--accent-purple);
+      font-family: var(--font-montserrat);
+    }
+
+    /* Custom Scrollbar Styling - Aligned with Mate Finish */
+    ::-webkit-scrollbar {
+      width: 10px; /* Slightly thinner */
+    }
+    ::-webkit-scrollbar-track {
+      background: var(--light-pink);
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: linear-gradient(to bottom, var(--primary-pink), var(--secondary-pink));
+      border-radius: 10px;
+      border: 2px solid var(--light-pink); /* Soft border */
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: linear-gradient(to bottom, var(--secondary-pink), var(--primary-pink));
+    }
+
+    /*
+     * Animated Background Overlay & Particles
+     * Creates subtle, dynamic background effects for visual interest, optimized for performance.
+     */
+    .background-overlay {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: radial-gradient(circle at top left, rgba(245, 230, 235, 0.3), transparent 50%), /* Softer colors */
+                  radial-gradient(circle at bottom right, rgba(208, 224, 237, 0.3), transparent 50%);
+      animation: backgroundPulse 20s infinite alternate ease-in-out; /* Slower pulse for subtlety */
+      z-index: -2;
+      will-change: background-position; /* Optimize for animation */
+    }
+    .particle-container {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      pointer-events: none; z-index: -1; overflow: hidden;
+    }
+    .particle {
+      position: absolute; background-color: rgba(255, 255, 255, 0.6); /* Softer white */
+      border-radius: var(--border-radius-circle); opacity: 0;
+      animation: particleFloat 15s infinite ease-out; /* Slower animation */
+      will-change: transform, opacity; /* Optimize for animation */
+    }
+    @keyframes particleFloat {
+      0% { transform: translateY(0) scale(0.5); opacity: 0; }
+      20% { opacity: 0.8; } /* Slightly less opaque */
+      80% { opacity: 0.8; }
+      100% { transform: translateY(-100vh) scale(1.5); opacity: 0; }
+    }
+
+    /* New Keyframe for Background Color Changing */
+    @keyframes backgroundPulse {
+      0% { background: linear-gradient(135deg, var(--neon-sky-blue) 0%, var(--neon-pink) 50%, var(--neon-purple) 100%); }
+      25% { background: linear-gradient(135deg, var(--neon-pink) 0%, var(--neon-purple) 50%, var(--neon-sky-blue) 100%); }
+      50% { background: linear-gradient(135deg, var(--neon-purple) 0%, var(--neon-sky-blue) 50%, var(--neon-pink) 100%); }
+      75% { background: linear-gradient(135deg, var(--neon-sky-blue) 0%, var(--neon-pink) 50%, var(--neon-purple) 100%); }
+      100% { background: linear-gradient(135deg, var(--neon-pink) 0%, var(--neon-purple) 50%, var(--neon-sky-blue) 100%); }
+    }
+
+    /*
+     * Preloader Styling
+     * Displays a loading animation before the main content is shown, with mate finish colors.
+     */
+    #preloader {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      background: var(--gradient-bg);
+      display: flex; flex-direction: column; justify-content: center; align-items: center;
+      z-index: 9999; opacity: 1; transition: opacity 1s ease-out, visibility 1s ease-out;
+    }
+    .spinner {
+      border: 8px solid rgba(233, 163, 185, 0.2); border-top: 8px solid var(--primary-pink); /* Muted pink border */
+      border-radius: var(--border-radius-circle); width: 70px; height: 70px;
+      animation: spin 1.5s linear infinite; margin-bottom: 25px;
+      position: relative;
+      box-shadow: 0 0 15px rgba(233, 163, 185, 0.5); /* Muted glow */
+    }
+    .spinner::before {
+      content: '💖'; position: absolute; top: 50%; left: 50%;
+      transform: translate(-50%, -50%); font-size: 1.8rem;
+      color: var(--secondary-pink); /* Muted pink heart */
+      animation: beat 1s infinite alternate, pulse 1.5s infinite ease-in-out;
+    }
+    .preloader-text {
+      font-family: var(--font-dancing-script); font-size: 2.5rem;
+      color: var(--primary-pink); text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+      animation: fadeIn 1s ease-in-out infinite alternate;
+      position: relative;
+    }
+    .preloader-text::after {
+      content: '';
+      animation: typing 3s steps(20, end) infinite alternate;
+      overflow: hidden;
+      white-space: nowrap;
+      display: inline-block;
+      vertical-align: bottom;
+      width: 0;
+      border-right: 2px solid var(--primary-pink);
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+    /*
+     * Header Styling
+     * Defines the main title and dynamic subtitle, with soft, elegant typography.
+     */
+    .main-header {
+      margin: 2.5rem auto 1.5rem;
+      z-index: 2; position: relative;
+      max-width: 90%;
+    }
+    .header-title {
+      font-family: var(--font-dancing-script); font-size: clamp(2.5rem, 8vw, 4.2rem);
+      color: var(--primary-pink); font-weight: 700;
+      text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2); /* Softer shadow */
+      letter-spacing: 3px;
+      animation: bounceIn 1s ease-out;
+      background: linear-gradient(45deg, var(--primary-pink), var(--secondary-pink), var(--accent-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent; /* Gradient text */
+      will-change: transform;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .header-title .icon { 
+      display: inline-block; 
+      animation: pulse 2s infinite ease-in-out; 
+      font-size: 0.8em;
+      vertical-align: middle;
+      margin: 0 10px;
+      text-shadow: none;
+      -webkit-text-fill-color: var(--primary-pink); /* Ensure icons retain color */
+    }
+    .header-dynamic-text {
+      font-family: var(--font-playfair-display); /* Elegant serif for subtitle */
+      font-size: clamp(1.2rem, 4vw, 1.8rem);
+      color: var(--accent-purple); /* Muted lavender */
+      margin-top: -1rem; opacity: 0;
+      animation: fadeIn 1.5s ease-out 1s forwards; min-height: 1.8rem;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1); /* Softer shadow */
+    }
+
+    /*
+     * Card Styling
+     * Base styles for all content cards on the page, with soft, mate finishes.
+     */
+    .card {
+      background: var(--card-bg); /* Soft white with slight transparency */
+      margin: 2.5rem auto; padding: 3rem;
+      border-radius: var(--border-radius-xl);
+      box-shadow: 0 8px 20px var(--shadow-light); /* Soft, diffused shadow */
+      max-width: 700px;
+      border: 2px solid var(--card-border); /* Subtle border */
+      position: relative; overflow: hidden;
+      transition: transform var(--transition-medium), box-shadow var(--transition-medium), opacity var(--transition-slow);
+      z-index: 1;
+      will-change: transform, box-shadow;
+    }
+    .card:hover {
+      transform: translateY(-18px) scale(1.03); /* More pronounced lift and scale */
+      box-shadow: 0 18px 35px var(--shadow-hover); /* Stronger, pink-tinted glow */
+    }
+    .card::before {
+      content: ''; position: absolute; top: -10px; left: -10px; right: -10px; bottom: -10px;
+      border-radius: calc(var(--border-radius-xl) + 10px);
+      background: var(--gradient-card-hover);
+      z-index: -1; filter: blur(18px); /* Slightly stronger blur */
+      opacity: 0; transition: opacity var(--transition-medium);
+    }
+    .card:hover::before { opacity: 0.7; } /* Slightly more opaque glow */
+
+    .section-title {
+      font-family: var(--font-dancing-script);
+      font-size: clamp(2.2rem, 6vw, 3.2rem);
+      color: var(--primary-pink);
+      text-shadow: 2px 2px 5px rgba(0,0,0,0.15); /* Stronger text shadow */
+      margin-bottom: 2.5rem;
+      animation: popIn 0.8s ease-out forwards; /* New animation for section titles */
+    }
+
+    /*
+     * Entry Form Specific Styling
+     * Customizes the initial greeting message card, emphasizing a soft, inviting feel.
+     */
+    .entry-card {
+      background: var(--card-bg) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0gAAAAAXNSR0IArs4c6QAAABFJREFUGFdjZGBgYGBgYGBgYGBgAAAB/wB+Gg0+AAAAAElFTSuQmCC') repeat; /* Very subtle paper texture */
+      background-blend-mode: overlay;
+      animation: fadeIn 1s ease-out, slideUp 0.8s ease-out;
+      padding: 4rem; /* Increased padding for more space */
+      position: relative;
+      overflow: hidden;
+    }
+    .entry-card::after { /* Added radial gradient overlay */
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: radial-gradient(circle at 70% 30%, rgba(255, 200, 220, 0.1), transparent 50%),
+                  radial-gradient(circle at 30% 80%, rgba(200, 220, 255, 0.1), transparent 50%);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .entry-card .card-title {
+      font-size: clamp(2.8rem, 7.5vw, 3.5rem); /* Slightly larger title */
+      color: var(--secondary-pink); /* Muted pink */
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.15); /* Stronger shadow */
+      margin-bottom: 1.8rem; /* Increased margin */
+      position: relative; z-index: 1;
+    }
+    .entry-card .card-description, .entry-card .card-question {
+      font-family: var(--font-playfair-display);
+      font-size: clamp(1.2rem, 3.2vw, 1.35rem); /* Slightly larger text */
+      color: var(--dark-grey); /* Softer dark grey */
+      margin-bottom: 1.2rem; /* Increased margin */
+      position: relative; z-index: 1;
+    }
+    .entry-card strong {
+      color: var(--accent-purple); /* Muted lavender */
+      font-weight: 700;
+    }
+    .entry-card .small-text {
+      font-size: 1.05rem; /* Slightly larger hint text */
+      color: #888; /* Lighter grey */
+      font-style: italic;
+      margin-top: 1.8rem; /* Increased margin */
+      position: relative; z-index: 1;
+    }
+
+    /*
+     * Button Styling
+     * Defines the appearance and interactive effects of buttons, with a soft, debossed look.
+     */
+    .btn-pink {
+      background: var(--gradient-button);
+      color: var(--text-light); border: 1px solid var(--secondary-pink); /* Thinner, softer border */
+      padding: 1.1rem 2.8rem; /* Slightly larger padding */
+      border-radius: 35px;
+      font-size: clamp(1.3rem, 3.8vw, 1.5rem); /* Slightly larger font size */
+      cursor: pointer;
+      transition: background var(--transition-medium), transform var(--transition-fast), box-shadow var(--transition-fast);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+      display: inline-flex;
+      align-items: center; gap: 10px;
+      position: relative; overflow: hidden;
+      font-weight: 700; letter-spacing: 1px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.2); /* Stronger text shadow */
+      will-change: transform, box-shadow;
+      border: none; /* Remove default button border */
+      z-index: 1; /* Ensure button is above overlay */
+    }
+    .btn-pink:hover {
+      background: var(--gradient-button-hover);
+      transform: translateY(-8px); /* More pronounced lift */
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4); /* Stronger, more diffused shadow */
+    }
+    .btn-pink:active { transform: translateY(0); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+    .btn-pink::after {
+      content: ''; position: absolute; border-radius: var(--border-radius-circle);
+      background-color: rgba(255, 255, 255, 0.8); /* More opaque ripple */
+      width: 130px; height: 130px; /* Larger ripple */
+      margin-top: -65px; margin-left: -65px; opacity: 0;
+      transition: all 0.7s ease-out; transform: scale(0);
+    }
+    .btn-pink:active::after { transform: scale(1); opacity: 1; transition: 0s; }
+
+    /*
+     * Input Field Styling
+     * Customizes the text input field with a clean, subtle design.
+     */
+    .name-form input[type="text"] {
+      padding: 1.1rem 1.4rem; /* Slightly larger padding */
+      border: 2px solid var(--bright-pink); /* Softer pink border */
+      border-radius: 30px;
+      font-size: clamp(1.1rem, 3.2vw, 1.3rem); /* Slightly larger font size */
+      margin-bottom: 1.8rem; /* Increased margin */
+      width: calc(100% - 2.8rem); /* Adjusted width */
+      max-width: 380px; /* Increased max-width */
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast), background-color var(--transition-fast);
+      background-color: var(--light-text-alt);
+      color: var(--text-dark);
+      box-shadow: inset 0 1px 4px rgba(0,0,0,0.08); /* Slightly stronger inner shadow */
+      font-family: var(--font-open-sans);
+      position: relative; z-index: 1;
+    }
+    .name-form input[type="text"]:focus {
+      outline: none; border-color: var(--primary-pink);
+      box-shadow: 0 0 15px rgba(233, 163, 185, 0.8), inset 0 1px 8px rgba(0,0,0,0.2); /* Stronger glow and inner shadow */
+      background-color: #fffafa;
+    }
+    .name-form input[type="text"]:hover { border-color: #f0c2d0; } /* Softer hover color */
+    .name-form input::placeholder { color: #999; font-style: italic; } /* Darker placeholder */
+
+    /*
+     * Welcome Banner Styling
+     * The main greeting displayed after successful entry, with a soft, inviting presence.
+     */
+    .welcome-banner {
+      background: linear-gradient(45deg, var(--primary-pink), var(--bright-pink), var(--secondary-pink));
+      color: var(--text-light);
+      padding: 3.5rem;
+      border-radius: var(--border-radius-xl);
+      box-shadow: 0 10px 25px var(--shadow-medium); /* Soft shadow */
+      animation: fadeIn 1s ease-out, slideUp 1s ease-out;
+      will-change: transform, opacity;
+    }
+    .welcome-banner h2 {
+      font-family: var(--font-dancing-script);
+      font-size: clamp(2.8rem, 8vw, 3.5rem);
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.25); /* Stronger shadow */
+      margin-bottom: 1.2rem;
+      line-height: 1.3;
+      color: var(--text-light); /* Ensure text is light on dark background */
+    }
+    .welcome-banner p {
+      font-family: var(--font-playfair-display);
+      font-size: clamp(1.15rem, 3.5vw, 1.3rem);
+      line-height: 1.8;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.15); /* Stronger shadow */
+      margin-bottom: 1.5rem;
+      color: var(--text-light); /* Ensure text is light on dark background */
+    }
+    .welcome-banner .heart-icon {
+      font-size: clamp(4rem, 10vw, 5rem);
+      animation: beat 1s infinite alternate, pulse 1.5s infinite ease-in-out;
+      text-shadow: 3px 3px 8px rgba(0,0,0,0.4); /* Stronger shadow */
+      display: block;
+      margin-bottom: 1rem;
+      color: var(--text-light); /* Ensure heart is light */
+    }
+    .welcome-banner .small-hearts {
+      font-size: clamp(1.8rem, 5vw, 2.2rem);
+      margin-top: 1.5rem;
+      animation: pulse 1.5s infinite ease-in-out;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+      color: var(--text-light); /* Ensure hearts are light */
+    }
+
+    /*
+     * Image Grid Styling
+     * Displays a collection of images with captions, designed for a clean, mate look.
+     */
+    .image-grid-section {
+      padding: 2.5rem 1.5rem;
+      margin: 2.5rem auto;
+      max-width: 1200px;
+    }
+    .image-grid-section .section-title {
+      margin-bottom: 2.5rem;
+    }
+    .image-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Adjusted minmax for smaller images */
+      gap: 2rem;
+      justify-content: center;
+      padding: 0 1rem;
+    }
+    .img-card {
+      background: var(--light-text-alt);
+      border-radius: var(--border-radius-medium);
+      overflow: hidden;
+      box-shadow: 0 6px 15px var(--shadow-light); /* Soft shadow */
+      transition: transform var(--transition-medium), box-shadow var(--transition-medium), filter var(--transition-medium);
+      animation: float 3s ease-in-out infinite; cursor: pointer;
+      border: 2px solid var(--card-border); /* Subtle border */
+      position: relative;
+      will-change: transform, box-shadow, filter;
+      max-width: 250px; /* Explicit max-width for image cards */
+      margin: 0 auto; /* Center cards within their grid cell */
+    }
+    .img-card::before {
+      content: '';
+      position: absolute;
+      top: -5px; left: -5px; right: -5px; bottom: -5px;
+      border-radius: calc(var(--border-radius-medium) + 5px);
+      border: 2px solid transparent;
+      background: var(--gradient-card-hover);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity var(--transition-medium);
+      z-index: -1;
+    }
+    .img-card:hover::before {
+      opacity: 0.9; /* Stronger border glow on hover */
+    }
+    .img-card:hover {
+      transform: translateY(-18px) rotate(3deg); /* More pronounced lift and slight rotate */
+      box-shadow: 0 15px 30px var(--shadow-hover); /* Stronger, diffused glow */
+      filter: brightness(1.1) saturate(1.1); /* Slightly more filter */
+    }
+    .img-card img {
+      width: 100%;
+      display: block;
+      transition: transform var(--transition-medium);
+      aspect-ratio: 3/4; /* Changed to 3:4 aspect ratio */
+      object-fit: cover; /* Cover the area */
+    }
+    .img-card:hover img { transform: scale(1.15); /* More pronounced zoom */ }
+    .img-caption { 
+      padding: 0.8rem; 
+      font-weight: bold; 
+      font-size: clamp(1rem, 3vw, 1.3rem);
+      color: var(--dark-grey); 
+      font-family: var(--font-montserrat);
+      background: rgba(255,255,255,0.7); /* Frosted glass effect */
+      position: relative;
+      z-index: 2;
+    }
+
+    /*
+     * Lightbox Styling
+     * Full-screen image viewer, designed for a clean, unobtrusive experience.
+     */
+    .lightbox {
+      display: none; position: fixed; z-index: 10000; padding-top: 60px;
+      left: 0; top: 0; width: 100%; height: 100%; overflow: auto;
+      background-color: rgba(0,0,0,0.9); /* Stronger dark overlay */
+      animation: fadeIn 0.3s ease-out;
+      backdrop-filter: blur(5px); /* Stronger blur behind image */
+    }
+    .lightbox-content {
+      margin: auto; display: block; max-width: 95%; max-height: 85%;
+      object-fit: contain; animation: zoomIn 0.3s ease-out;
+      border-radius: var(--border-radius-medium);
+      box-shadow: 0 0 25px rgba(220, 150, 170, 0.6); /* Stronger pink glow */
+    }
+    .lightbox-caption {
+      margin: auto; display: block; width: 80%; max-width: 800px;
+      text-align: center; color: #eee;
+      padding: 15px 0;
+      font-size: clamp(1rem, 3vw, 1.2rem);
+      font-family: var(--font-playfair-display);
+    }
+    .lightbox-close {
+      position: absolute; top: 20px; right: 40px;
+      color: #f1f1f1;
+      font-size: 45px;
+      font-weight: bold; transition: var(--transition-fast); cursor: pointer;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5); /* Stronger shadow */
+    }
+    .lightbox-close:hover, .lightbox-close:focus { color: var(--primary-pink); text-decoration: none; cursor: pointer; }
+    .lightbox-nav {
+      position: absolute; top: 50%; width: 100%; display: flex;
+      justify-content: space-between; transform: translateY(-50%);
+      padding: 0 30px;
+      box-sizing: border-box;
+    }
+    .lightbox-nav-btn {
+      color: #f1f1f1; font-size: 60px;
+      font-weight: bold;
+      cursor: pointer; transition: var(--transition-fast); user-select: none;
+      text-shadow: 0 0 10px rgba(0,0,0,0.5); /* Stronger shadow */
+    }
+    .lightbox-nav-btn:hover { color: var(--primary-pink); }
+    @keyframes zoomIn { from { transform: scale(0.8); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+    /*
+     * Main Message Section
+     * The core message content, presented elegantly.
+     */
+    .main-message-section, .thoughts-section, .jokes-section, .quotes-section, .fun-facts-section, .gallery-section {
+      background: var(--card-bg);
+      padding: 3rem;
+      border-radius: var(--border-radius-xl);
+      box-shadow: 0 8px 20px var(--shadow-light); /* Soft shadow */
+      max-width: 800px;
+      margin: 2.5rem auto;
+      border: 2px solid var(--card-border);
+    }
+    .main-message-section .section-title {
+      margin-bottom: 1.5rem;
+    }
+    .main-message-section p {
+      line-height: var(--line-height-base);
+      margin-bottom: 1.2rem;
+    }
+    .main-message-section .small-hearts {
+      font-size: clamp(1.8rem, 5vw, 2.2rem);
+      margin-top: 2rem;
+      animation: pulse 1.5s infinite ease-in-out;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    }
+
+    /* Thoughts Section Specific */
+    .thoughts-section p {
+      margin-bottom: 1em;
+    }
+
+    /* Jokes Section Specific */
+    .jokes-section .jokes-list {
+      text-align: left;
+      margin: 1.5em 0 1.5em 2em;
+      list-style: disc;
+      color: var(--text-dark);
+      font-family: var(--font-playfair-display);
+      font-size: 1.1rem;
+    }
+    .jokes-section .jokes-list li {
+      margin-bottom: 0.8em;
+    }
+
+    /* Quotes Section Specific */
+    .quotes-section blockquote {
+      margin-bottom: 1.5em;
+      position: relative;
+      padding-left: 2.5em; /* Space for decorative quote mark */
+    }
+    .quotes-section blockquote::before {
+      content: '“'; /* Opening quote mark */
+      font-family: var(--font-dancing-script);
+      font-size: 4em;
+      color: var(--bright-pink);
+      position: absolute;
+      left: 0.2em;
+      top: 0.1em;
+      line-height: 1;
+      opacity: 0.7;
+    }
+    .quotes-section blockquote::after {
+      content: '”'; /* Closing quote mark */
+      font-family: var(--font-dancing-script);
+      font-size: 4em;
+      color: var(--bright-pink);
+      position: absolute;
+      right: 0.2em;
+      bottom: -0.5em;
+      line-height: 1;
+      opacity: 0.7;
+    }
+    .quotes-section blockquote footer {
+      font-style: normal; /* Override italic from blockquote */
+      margin-top: 0.5em;
+      font-size: 0.95em;
+      color: var(--dark-grey);
+    }
+
+    /* Fun Facts Section Specific */
+    .fun-facts-section .fact-item {
+      background-color: var(--light-text-alt);
+      border: 1px solid var(--border-light-grey);
+      border-radius: var(--border-radius-medium);
+      padding: 1.2rem;
+      margin-bottom: 1rem;
+      text-align: left;
+      box-shadow: 0 2px 5px var(--shadow-subtle);
+      transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    }
+    .fun-facts-section .fact-item:hover {
+      transform: translateY(-5px); /* More pronounced lift */
+      box-shadow: 0 6px 12px var(--shadow-light); /* Stronger shadow */
+    }
+    .fun-facts-section .fact-item strong {
+      color: var(--primary-pink);
+      font-family: var(--font-montserrat);
+      font-size: 1.1em;
+    }
+
+    /*
+     * Reasons Section Styling
+     * Interactive flip cards detailing reasons for appreciation, with a clean, mate finish.
+     */
+    .reasons-section {
+      padding: 3.5rem 2rem;
+      margin: 3rem auto;
+      max-width: 1100px;
+      background: var(--gradient-section-bg); /* Using new subtle gradient */
+      background-blend-mode: overlay; /* Blend with subtle texture */
+      border-radius: var(--border-radius-xl);
+      box-shadow: 0 10px 25px var(--shadow-medium); /* Soft shadow */
+      text-align: center; overflow: hidden;
+      border: 2px solid var(--card-border);
+    }
+    .reasons-section .section-title {
+      margin-bottom: 3.5rem;
+      text-shadow: 2px 2px 6px rgba(0,0,0,0.2); /* Stronger shadow */
+      animation: slideUp 1.5s ease-out forwards; /* Adjusted animation duration */
+      color: var(--accent-purple);
+    }
+    .reasons-grid {
+      display: grid; 
+      grid-template-columns: repeat(3, minmax(180px, 1fr)); /* Changed to 3 columns */
+      gap: 2.5rem;
+      justify-content: center; 
+      padding: 0 1rem;
+    }
+    .reason-card {
+      background-color: transparent; height: 220px;
+      perspective: 1200px;
+      cursor: pointer; border-radius: var(--border-radius-large);
+      box-shadow: 0 5px 15px var(--shadow-light); /* Soft shadow */
+      transition: transform var(--transition-medium), box-shadow var(--transition-medium);
+      will-change: transform, box-shadow;
+    }
+    .reason-card:hover { 
+      transform: translateY(-12px) rotateY(4deg); /* More pronounced lift and slight rotate */
+      box-shadow: 0 15px 30px var(--shadow-hover); /* Stronger, diffused glow */
+    }
+    .card-inner {
+      position: relative; width: 100%; height: 100%; text-align: center;
+      transition: transform 0.8s ease-in-out; /* Smoother transition */
+      transform-style: preserve-3d; border-radius: var(--border-radius-large);
+    }
+    .reason-card.flipped .card-inner { transform: rotateY(180deg); }
+    .card-front, .card-back {
+      position: absolute; width: 100%; height: 100%; -webkit-backface-visibility: hidden;
+      backface-visibility: hidden; border-radius: var(--border-radius-large); display: flex;
+      flex-direction: column; justify-content: center; align-items: center;
+      padding: 1.8rem;
+      box-sizing: border-box;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1); /* Slightly stronger shadow for faces */
+    }
+    .card-front { 
+      background: var(--light-text-alt) url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAYAAABytg0gAAAAAXNSR0IArs4c6QAAABFJREFUGFdjZGBgYGBgYGBgYGBgAAAB/wB+Gg0+AAAAAElFTSuQmCC') repeat; /* Subtle texture */
+      background-blend-mode: overlay;
+      color: var(--primary-pink); 
+      border: 2px solid var(--bright-pink); /* Softer border */
+      box-shadow: inset 0 0 12px rgba(233, 163, 185, 0.25); /* Stronger inner shadow */
+    }
+    .card-front .reason-icon { 
+      font-size: clamp(2.5rem, 6vw, 3.5rem);
+      margin-bottom: 0.8rem;
+      animation: pulse 2s infinite ease-in-out; 
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    }
+    .card-front h4 { 
+      font-family: var(--font-montserrat); 
+      font-size: clamp(1.4rem, 4vw, 1.6rem);
+      margin: 0; font-weight: 700; 
+      color: var(--text-dark);
+    }
+    .card-back {
+      background: linear-gradient(to bottom right, var(--secondary-pink), var(--accent-purple), var(--soft-purple));
+      color: var(--text-light); transform: rotateY(180deg); display: flex;
+      align-items: center; justify-content: center;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+    }
+    .card-back p { 
+      font-family: var(--font-open-sans); 
+      font-size: clamp(1.05rem, 3vw, 1.15rem);
+      line-height: 1.6; 
+      padding: 0 1.2rem;
+      color: var(--text-light);
+    }
+    /* Staggered animation for reason cards */
+    .reasons-grid .reason-card { opacity: 0; transform: translateY(30px); animation: fadeInSlideUp 0.8s ease-out forwards; }
+    /* Animation delays will be handled by JS for better control and scalability */
+
+
+    /*
+     * Memories Timeline Styling
+     * A vertical timeline of shared memories, with subtle animations and mate finish.
+     */
+    .memories-section {
+      padding: 3rem;
+      margin: 3rem auto;
+      max-width: 850px;
+      background: var(--card-bg); border-radius: var(--border-radius-xl);
+      box-shadow: 0 8px 20px var(--shadow-light); /* Soft shadow */
+      text-align: left; position: relative;
+      border: 2px solid var(--card-border);
+    }
+    .memories-section .section-title {
+      text-align: center; 
+      margin-bottom: 2.5rem;
+      background: linear-gradient(to right, var(--primary-pink), var(--accent-purple), var(--neon-purple));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: none;
+    }
+    .timeline { position: relative; padding: 20px 0; }
+    .timeline::before {
+      content: ''; position: absolute; left: 50%; top: 0; width: 4px; height: 100%; /* Thinner line */
+      background: linear-gradient(to bottom, var(--primary-pink), var(--accent-purple), var(--secondary-pink));
+      transform: translateX(-50%); z-index: 0;
+      animation: timelinePulse 6s infinite alternate; /* Slower, more subtle pulse */
+    }
+    @keyframes timelinePulse {
+      0% { opacity: 0.7; transform: translateX(-50%) scaleY(0.99); }
+      100% { opacity: 1; transform: translateX(-50%) scaleY(1.01); }
+    }
+    .timeline-item {
+      display: flex; justify-content: space-between; margin-bottom: 50px;
+      position: relative; opacity: 0; transform: translateY(40px); /* Softer initial transform */
+      transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+      will-change: transform, opacity;
+    }
+    .timeline-item.in-view { opacity: 1; transform: translateY(0); }
+    .timeline-item:nth-child(odd) { flex-direction: row-reverse; }
+
+    .timeline-item-content {
+      width: calc(50% - 50px);
+      background: var(--card-bg);
+      padding: 1.8rem;
+      border-radius: var(--border-radius-medium);
+      border: 2px solid transparent;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      position: relative;
+      text-align: left;
+      box-shadow: 0 4px 10px var(--shadow-light);
+      transition: all var(--transition-medium);
+      will-change: transform, box-shadow;
+      background: linear-gradient(to right, rgba(233,163,185,0.1), rgba(168,216,234,0.1));
+    }
+    .timeline-item-content::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      border-radius: calc(var(--border-radius-medium) + 3px);
+      background: linear-gradient(45deg, var(--primary-pink), var(--secondary-pink), var(--accent-purple));
+      z-index: -1;
+      opacity: 0;
+      transition: opacity var(--transition-medium);
+    }
+    .timeline-item-content:hover::before {
+      opacity: 0.7;
+    }
+    .timeline-item-content:hover { transform: translateY(-7px); box-shadow: 0 10px 25px var(--shadow-hover); } /* More pronounced hover */
+
+    .timeline-item-content::before {
+      content: '';
+      position: absolute;
+      top: 25px;
+      width: 0;
+      height: 0;
+      border-style: solid;
+    }
+    .timeline-item:nth-child(even) .timeline-item-content::before {
+      right: -22px;
+      border-width: 12px 0 12px 12px;
+      border-color: transparent transparent transparent var(--light-text-alt);
+    }
+    .timeline-item:nth-child(odd) .timeline-item-content::before {
+      left: -22px;
+      border-width: 12px 12px 12px 0;
+      border-color: transparent var(--light-text-alt) transparent transparent;
+    }
+
+    .timeline-item-dot {
+      position: absolute;
+      left: 50%;
+      top: 30px;
+      transform: translateX(-50%);
+      width: 25px;
+      height: 25px;
+      background: var(--primary-pink);
+      border-radius: var(--border-radius-circle);
+      border: 4px solid var(--text-light);
+      z-index: 1;
+      animation: pulse 1.5s infinite alternate, beat 1s infinite alternate;
+      box-shadow: 0 0 20px var(--primary-pink);
+      filter: drop-shadow(0 0 10px var(--secondary-pink));
+      background: conic-gradient(var(--primary-pink), var(--secondary-pink), var(--primary-pink));
+    }
+
+    .timeline-item-content h4 {
+      font-family: var(--font-montserrat); 
+      font-size: clamp(1.3rem, 3.5vw, 1.5rem);
+      color: var(--secondary-pink);
+      margin: 0 0 0.8rem 0;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+      transition: color var(--transition-fast);
+    }
+    .timeline-item-content:hover h4 {
+      color: var(--accent-purple);
+      text-shadow: 1px 1px 5px rgba(160, 132, 192, 0.3);
+    }
+    .timeline-item-content p { 
+      font-family: var(--font-playfair-display);
+      font-size: clamp(1rem, 3vw, 1.1rem); 
+      color: var(--text-dark); 
+      margin: 0; 
+    }
+
+    /*
+     * Future Wishes Section
+     * A concluding message with wishes for the future, presented elegantly.
+     */
+    .future-wishes-section {
+      padding: 3rem;
+      margin: 3rem auto;
+      max-width: 850px;
+      background: var(--gradient-section-bg);
+      border-radius: var(--border-radius-xl);
+      box-shadow: 0 8px 20px var(--shadow-light);
+      text-align: center;
+      border: 2px solid transparent;
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      position: relative;
+      overflow: hidden;
+    }
+    .future-wishes-section::before {
+      content: '';
+      position: absolute;
+      top: -5px;
+      left: -5px;
+      right: -5px;
+      bottom: -5px;
+      background: var(--gradient-card-hover);
+      z-index: -1;
+      filter: blur(15px);
+      opacity: 0.5;
+    }
+    .future-wishes-section .section-title {
+      margin-bottom: 2rem;
+    }
+    .future-wishes-section .wish-paragraph {
+      font-family: var(--font-playfair-display);
+      font-size: clamp(1.1rem, 3vw, 1.2rem);
+      margin-bottom: 1.2rem;
+      padding: 1rem;
+      border-radius: var(--border-radius-medium);
+      opacity: 0; 
+      transform: translateY(20px);
+      transition: opacity 0.8s ease-out, transform 0.8s ease-out, background 0.4s ease;
+      will-change: transform, opacity;
+    }
+    .future-wishes-section .wish-paragraph:first-child { 
+      background: rgba(244, 173, 198, 0.2);
+      color: #8e4162;
+    }
+    .future-wishes-section .wish-paragraph:nth-child(2) { 
+      background: rgba(168, 216, 234, 0.2);
+      color: #386a7a;
+    }
+    .future-wishes-section .wish-paragraph:nth-child(3) { 
+      background: rgba(214, 162, 231, 0.2);
+      color: #5c3a6b;
+    }
+    .future-wishes-section .wish-paragraph:last-child { 
+      background: rgba(238, 223, 166, 0.2);
+      color: #6b5a2c;
+    }
+    .future-wishes-section .wish-paragraph.in-view { opacity: 1; transform: translateY(0); }
+    .future-wishes-section .signature {
+      font-family: var(--font-great-vibes);
+      font-size: clamp(2rem, 6vw, 2.5rem);
+      color: var(--secondary-pink);
+      margin-top: 2.5rem;
+      padding: 0.5rem 2rem;
+      border-radius: 30px;
+      background: linear-gradient(to right, rgba(233, 163, 185, 0.2), rgba(212, 122, 150, 0.2));
+      display: inline-block;
+      opacity: 0; 
+      transform: scale(0.8);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.15);
+      will-change: transform, opacity;
+    }
+    .future-wishes-section .signature.in-view { opacity: 1; transform: scale(1); }
+
+    /*
+     * Footer Message Styling
+     * A dynamic message at the bottom of the page, with elegant typography.
+     */
+    .main-footer {
+      margin-top: 3.5rem;
+      padding-bottom: 2.5rem;
+    }
+    .footer-message {
+      font-family: var(--font-dancing-script); font-size: clamp(1.8rem, 5vw, 2.5rem);
+      color: var(--primary-pink); margin: 0 auto 1.5rem;
+      text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 2s ease-out, slideUp 1s ease-out;
+    }
+    .footer-hearts {
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      color: var(--secondary-pink);
+      animation: pulse 1.5s infinite ease-in-out;
+    }
+
+    /*
+     * Small Hearts & Icons Styling
+     * General styles for decorative heart icons, with colors from the mate palette.
+     */
+    .small-hearts { margin-top: 1.8rem; font-size: clamp(1.8rem, 5vw, 2.2rem); animation: pulse 1.5s infinite ease-in-out; }
+    .heart-icon { font-size: clamp(4rem, 10vw, 5rem); animation: beat 1s infinite alternate; }
+
+    /*
+     * Floating Hearts Background Animation (Jelly/Liquid/River Flowing Effect)
+     * Creates a continuous animation of hearts floating downwards, with muted colors and soft shadows.
+     */
+    @keyframes floatHearts {
+      0% { transform: translateY(-100px) translateX(0) scale(0.8); opacity: 0; } /* Start above viewport, smaller, invisible */
+      10% { opacity: 0.6; } /* Fade in */
+      50% { transform: translateY(50vh) translateX(var(--float-x-offset)) scale(var(--float-scale)); opacity: 0.8; } /* Mid-point, horizontal drift, varied scale */
+      90% { opacity: 0.2; } /* Fade out */
+      100% { transform: translateY(110vh) translateX(0) scale(0.5); opacity: 0; } /* End below viewport, smaller, invisible */
+    }
+
+    .heart-container {
+      position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+      overflow: hidden; pointer-events: none; z-index: -1;
+    }
+    .heart {
+      position: absolute; 
+      bottom: -50px; /* Start from bottom */
+      font-size: 2.5rem;
+      animation: floatHearts 15s linear infinite; /* Slower animation for subtlety, longer duration */
+      color: var(--primary-pink); /* Default muted pink */
+      opacity: 0.5; /* Default lower opacity */
+      text-shadow: 0 0 8px rgba(255, 255, 255, 0.5); /* Stronger glow */
+      will-change: transform, opacity;
+      /* Custom properties for animation variation */
+      --float-x-offset: 0px;
+      --float-scale: 1;
+    }
+    /* Individual heart animations for variety in color, size, and delay - handled by JS */
+
+    /* Scroll to Top Button */
+    #scrollToTopBtn {
+      display: none; /* Hidden by default */
+      position: fixed; /* Fixed position */
+      bottom: 30px; /* Place the button at the bottom of the page */
+      right: 30px; /* Place the button at the right side */
+      z-index: 99; /* Make sure it does not overlap */
+      border: none; /* Remove borders */
+      outline: none; /* Remove outline */
+      background-color: var(--accent-purple); /* Set a background color */
+      color: white; /* Text color */
+      cursor: pointer; /* Add a mouse pointer on hover */
+      padding: 15px; /* Some padding */
+      border-radius: var(--border-radius-circle); /* Rounded corners */
+      font-size: 22px; /* Increase font size */
+      box-shadow: 0 5px 12px rgba(0,0,0,0.25); /* Stronger shadow */
+      transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    #scrollToTopBtn:hover {
+      background-color: var(--secondary-pink); /* Darker background on hover */
+      transform: translateY(-7px) scale(1.08); /* More pronounced lift and scale */
+    }
+
+    #scrollToTopBtn.show {
+      display: block;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Pop-up Effect Styling */
+    .popup-overlay {
+      display: none; /* Hidden by default */
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent dark overlay */
+      backdrop-filter: blur(3px); /* Subtle blur effect */
+      z-index: 1000; /* Above all other content */
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease-out;
+    }
+
+    .popup-content {
+      background: var(--card-bg);
+      padding: 3rem;
+      border-radius: var(--border-radius-xl);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      position: relative;
+      border: 5px solid transparent; /* Thicker border for gradient */
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      animation: popupScaleIn 0.5s ease-out forwards; /* Pop-in animation */
+      transform: scale(0.8); /* Initial scale for animation */
+      opacity: 0; /* Initial opacity for animation */
+      color: var(--text-dark);
+    }
+
+    .popup-content::before { /* Gradient border effect */
+      content: '';
+      position: absolute;
+      inset: -5px; /* Extend beyond content for border */
+      border-radius: var(--border-radius-xl);
+      background: var(--gradient-popup-border);
+      z-index: -1;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+    }
+
+    .popup-content h3 {
+      font-family: var(--font-dancing-script);
+      font-size: clamp(2rem, 6vw, 3rem);
+      color: var(--neon-pink); /* Vibrant pink for title */
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+      animation: fadeInScale 0.8s ease-out 0.2s forwards;
+    }
+
+    .popup-content p {
+      font-family: var(--font-playfair-display);
+      font-size: clamp(1.1rem, 3.5vw, 1.25rem);
+      color: var(--dark-grey);
+      margin-bottom: 1.5rem;
+      animation: fadeInSlideUp 0.8s ease-out 0.4s forwards;
+    }
+
+    .popup-close-btn {
+      background: var(--gradient-button);
+      color: var(--text-light);
+      border: none;
+      padding: 0.8rem 1.8rem;
+      border-radius: 30px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+      animation: fadeInSlideUp 0.8s ease-out 0.6s forwards;
+    }
+
+    .popup-close-btn:hover {
+      background: var(--gradient-button-hover);
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    /*
+     * Keyframe Animations (General)
+     * Reusable animations for various elements, optimized for smooth performance.
+     */
+    @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+    @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } } /* More pronounced slide */
+    @keyframes bounceIn { 0% { transform: scale(0.1); opacity: 0; } 50% { transform: scale(1.1); opacity: 1; } 70% { transform: scale(0.95); } 100% { transform: scale(1); } } /* More pronounced bounce */
+    @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.07); } 100% { transform: scale(1); } } /* More pronounced pulse */
+    @keyframes beat { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.1); } } /* More pronounced beat */
+    /* backgroundPulse is redefined above for color changing */
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); } 10%, 30%, 50%, 70%, 90% { transform: translateX(-8px); } /* Stronger shake */
+      20%, 40%, 60%, 80% { transform: translateX(8px); }
+    }
+    @keyframes confettiFall {
+      0% { transform: translateY(0) rotateZ(0deg); opacity: 1; }
+      100% { transform: translateY(100vh) rotateZ(1080deg); opacity: 0; } /* Faster rotation */
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-8px) rotate(-2deg); } /* More pronounced float */
+    }
+    @keyframes fadeInSlideUp { from { opacity: 0; transform: translateY(30px); } to { transform: translateY(0); opacity: 1; } } /* More pronounced slide */
+
+    /* New Animations for Pop-up and General Elements */
+    @keyframes popIn {
+      0% { transform: scale(0.5); opacity: 0; }
+      80% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); }
+    }
+
+    @keyframes popupScaleIn {
+      0% { transform: scale(0.8); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    @keyframes fadeInScale {
+      0% { opacity: 0; transform: scale(0.9); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /*
+     * Responsive Design
+     * Adjusts layout and styles for different screen sizes, maintaining the mate finished look.
+     */
+    @media (max-width: 1200px) {
+      .image-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .card { max-width: 650px; padding: 2.5rem; }
+      .reasons-grid { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); }
+      .memories-section { max-width: 750px; }
+      .timeline-item-content { width: calc(50% - 40px); }
+      .timeline-item:nth-child(even) .timeline-item-content::before { right: -18px; border-width: 10px 0 10px 10px; }
+      .timeline-item:nth-child(odd) .timeline-item-content::before { left: -18px; border-width: 10px 10px 10px 0; }
+      .timeline-item-dot { width: 22px; height: 22px; border-width: 3px; }
+      .popup-content { padding: 2.5rem; }
+    }
+
+    @media (max-width: 768px) {
+      .main-header { margin: 1.5rem auto 1rem; }
+      .header-title { letter-spacing: 1px; }
+      .header-title .icon { margin: 0 5px; }
+      .card { margin: 1.5rem auto; padding: 2rem; border-radius: var(--border-radius-large); }
+      .entry-card { padding: 3rem; } /* Adjusted for smaller screens */
+      .entry-card .card-title { font-size: 2.2rem; }
+      .entry-card .card-description, .entry-card .card-question { font-size: 1.05rem; }
+      .btn-pink { font-size: 1.1rem; padding: 0.9rem 2.2rem; }
+      .name-form input[type="text"] { font-size: 1.05rem; padding: 0.9rem 1.1rem; max-width: 280px; }
+      .welcome-banner h2 { font-size: 2.8rem; }
+      .welcome-banner p { font-size: 1.15rem; }
+      .welcome-banner .heart-icon { font-size: 4rem; }
+      .image-grid-section { padding: 1.5rem 1rem; }
+      .image-grid { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+      .img-card { max-width: 200px; } .img-caption { font-size: 1.2rem; }
+      .lightbox-close { font-size: 40px; top: 15px; right: 25px; }
+      .lightbox-nav-btn { font-size: 50px; }
+      .main-message-section, .thoughts-section, .jokes-section, .quotes-section, .fun-facts-section, .gallery-section { padding: 2rem; }
+      .main-message-section .section-title { font-size: 2.8rem; }
+      .main-message-section p { font-size: 1.1rem; }
+      .reasons-section { padding: 2.5rem 1.5rem; } .reasons-section .section-title { font-size: 2.8rem; }
+      .reasons-grid { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; }
+      .reason-card { height: 200px; } .card-front h4 { font-size: 1.4rem; } .card-back p { font-size: 1.05rem; }
+      .memories-section { padding: 2rem; } .memories-section .section-title { font-size: 2.5rem; }
+      .timeline::before { left: 20px; width: 3px; }
+      .timeline-item { flex-direction: column; align-items: flex-start; margin-bottom: 30px; }
+      .timeline-item-content { width: calc(100% - 50px); margin-left: 50px; padding: 1.5rem; }
+      .timeline-item-content::before { display: none; } /* Hide triangle on mobile */
+      .timeline-item-dot { left: 20px; transform: translateX(-50%); width: 20px; height: 20px; border-width: 3px; top: 25px; }
+      .timeline-item-content h4 { font-size: 1.3rem; } .timeline-item-content p { font-size: 1rem; }
+      .future-wishes-section { padding: 2rem; } .future-wishes-section .section-title { font-size: 2.5rem; }
+      .future-wishes-section .wish-paragraph { font-size: 1.1rem; } .future-wishes-section .signature { font-size: 2rem; }
+      .footer-message { font-size: 2rem; }
+      .small-hearts { font-size: 1.8rem; } .heart-icon { font-size: 3.5rem; }
+      .heart { font-size: 2rem; }
+      #scrollToTopBtn { bottom: 20px; right: 20px; padding: 12px; font-size: 20px; }
+      .popup-content { padding: 2rem; }
+    }
+
+    @media (max-width: 480px) {
+      .main-header { margin: 1rem auto 0.5rem; }
+      .header-title { letter-spacing: 0; }
+      .header-title .icon { margin: 0 5px; }
+      .header-dynamic-text { font-size: 1.2rem; }
+      .card { padding: 1.5rem; border-radius: var(--border-radius-medium); }
+      .entry-card { padding: 2.5rem; } /* Adjusted for very small screens */
+      .entry-card .card-title { font-size: 1.8rem; }
+      .entry-card .card-description, .entry-card .card-question { font-size: 0.95rem; }
+      .btn-pink { font-size: 0.95rem; padding: 0.8rem 1.8rem; }
+      .name-form input[type="text"] { font-size: 0.95rem; padding: 0.8rem; max-width: 250px; }
+      .welcome-banner h2 { font-size: 2.2rem; }
+      .welcome-banner p { font-size: 1rem; }
+      .welcome-banner .heart-icon { font-size: 3rem; }
+      .image-grid-section { padding: 1rem 0.5rem; }
+      .image-grid { grid-template-columns: 1fr; gap: 0.8rem; } /* Stack images on very small screens */
+      .img-card { max-width: 200px; margin: 0 auto; } /* Center single column images and make them smaller */
+      .img-caption { font-size: 1rem; }
+      .lightbox-close { font-size: 35px; top: 10px; right: 15px; }
+      .lightbox-nav-btn { font-size: 40px; padding: 0 10px; }
+      .main-message-section, .thoughts-section, .jokes-section, .quotes-section, .fun-facts-section, .gallery-section { padding: 1.5rem; }
+      .main-message-section .section-title { font-size: 2.2rem; }
+      .main-message-section p { font-size: 1rem; }
+      .jokes-section .jokes-list { margin-left: 1.5em; font-size: 1rem; }
+      .reasons-section { grid-template-columns: 1fr; gap: 1rem; } /* Adjusted for 1 column on very small screens */
+      .reason-card { height: 180px; } .card-front h4 { font-size: 1.3rem; } .card-back p { font-size: 0.95rem; }
+      .memories-section { padding: 1.5rem; } .memories-section .section-title { font-size: 2rem; }
+      .timeline-item-content { width: calc(100% - 40px); margin-left: 40px; padding: 1.2rem; }
+      .timeline-item-dot { left: 15px; width: 18px; height: 18px; border-width: 3px; }
+      .future-wishes-section { padding: 1.5rem; } .future-wishes-section .section-title { font-size: 2.2rem; }
+      .future-wishes-section .wish-paragraph { font-size: 0.95rem; } .future-wishes-section .signature { font-size: 1.8rem; }
+      .footer-message { font-size: 1.5rem; }
+      .small-hearts { font-size: 1.5rem; } .heart-icon { font-size: 3rem; }
+      .heart { font-size: 1.5rem; }
+      #scrollToTopBtn { bottom: 15px; right: 15px; padding: 10px; font-size: 18px; }
+      .popup-content { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Preloader: Displays a loading animation before the page content is fully loaded. -->
+  <div id="preloader">
+    <div class="spinner"></div>
+    <div class="preloader-text">Loading a special message...</div>
+  </div>
+
+  <!-- Background Music: Plays a looping background track. -->
+  <!-- Added preload="auto" for faster loading -->
+  <audio id="bg-music" loop autoplay preload="auto">
+    <!-- Provide multiple source types for broader browser compatibility -->
+    <source src="dil_tu_jaan_tu.mp3" type="audio/mpeg">
+    <source src="dil_tu_jaan_tu.ogg" type="audio/ogg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <!-- Background Effects: Visual enhancements like subtle gradients and floating particles. -->
+  <div class="background-overlay"></div>
+  <div class="particle-container"></div>
+  <div class="heart-container"></div> <!-- Floating hearts will be generated by JS -->
+
+  <!-- Main Header: The prominent title of the page with dynamic text. -->
+  <header class="main-header">
+    <h1 class="header-title">
+      <span class="icon">👩‍👧‍👧</span>
+      Happy Sister's Day!
+      <span class="icon">👩‍👧‍👧</span>
+    </h1>
+    <div id="header-dynamic-text" class="header-dynamic-text"></div>
+  </header>
+
+  <!-- Entry Form: The initial card prompting for a secret name to unlock content. -->
+  <div id="greeting-message" class="card entry-card">
+    <h2 class="card-title">Welcome, My Dearest Sister! 🌟💖</h2>
+    <p class="card-description">A truly magical and heartfelt message awaits you, brimming with love, laughter, and cherished memories we've created together. To unlock this special tribute, please tell me:</p>
+    <p class="card-question"><strong>What is Your Super Secret Nickname? 🤔✨</strong></p>
+    <p class="small-text">(Hint: It's the adorable name I whisper to you every single time, my absolute favorite sister! 😉🤫)</p>
+    <form id="name-form" class="name-form">
+      <label for="sisterName" class="sr-only">Sister's Secret Name</label>
+      <input type="text" id="sisterName" name="sisterName" placeholder="Whisper the magic word here..." required autocomplete="off">
+      <button type="submit" class="btn-pink btn-reveal">Reveal My Message ✨💌</button>
+    </form>
+  </div>
+
+  <!-- Main Content: This section is hidden initially and revealed after successful name entry. -->
+  <main id="main-content" class="main-content" style="display:none; opacity:0;">
+    <!-- Welcome Banner: Displays a personalized greeting to the user. -->
+    <section id="welcome-banner" class="card welcome-banner"></section>
+
+    <!-- Image Grid: Showcases cherished photos with captions. -->
+    <section class="image-grid-section">
+      <h2 class="section-title">Our Cherished Moments & Adventures! 📸✨</h2>
+      <div class="image-grid">
+        <article class="img-card">
+          <img src="1.jpg" alt="A cherished memory of our shared past, filled with joy and laughter." loading="lazy">
+          <div class="img-caption">Precious Moments 📸</div>
+        </article>
+        <article class="img-card">
+          <img src="2.jpg" alt="A snapshot of our journey together, highlighting our growth and enduring bond." loading="lazy">
+          <div class="img-caption">Your Radiant Smile 💗</div>
+        </article>
+        <article class="img-card">
+          <img src="3.jpg" alt="Looking forward to many more adventures and beautiful memories yet to be made." loading="lazy">
+          <div class="img-caption">Our Fun Poses 🌟</div>
+      </div>
+    </section>
+
+    <!-- Lightbox: A full-screen image viewer for the image grid. -->
+    <div id="myLightbox" class="lightbox" onclick="closeLightbox()">
+      <span class="lightbox-close">&times;</span>
+      <img class="lightbox-content" id="lightboxImage">
+      <div id="lightboxCaption" class="lightbox-caption"></div>
+      <div class="lightbox-nav">
+        <a class="lightbox-nav-btn" onclick="event.stopPropagation(); changeImage(-1);">&#10094;</a>
+        <a class="lightbox-nav-btn" onclick="event.stopPropagation(); changeImage(1);">&#10095;</a>
+      </div>
+    </div>
+
+    <!-- Main Message: A heartfelt message expressing appreciation and love. -->
+    <section class="card main-message-section">
+      <h2 class="section-title">Forever & Always, My Dearest <span id="main-message-name"></span>! ❤️</h2>
+      <p>
+        These pictures are just a tiny peek into the beautiful tapestry of our shared journey. 
+        Every giggle, every wild adventure, every moment of unwavering support – they all weave together to make our connection stronger than ever. 
+        Thank you for being the most incredible sister anyone could ever dream of having. 
+        Here's to countless more amazing memories waiting to be made! 🥂👯‍♀️
+      </p>
+      <p>
+        From whispering our deepest secrets to conquering life's biggest challenges, you've always been my steadfast rock. 
+        Your infectious spirit, your fierce loyalty, and your incredibly kind heart make you truly one-of-a-kind. 
+        I treasure every single memory we've created and eagerly anticipate all the wonderful moments yet to come. 
+        Love you more than words can ever express, my dearest big sis! 🥰💖
+      </p>
+      <div class="small-hearts">💗💓💖💘💞💝</div>
+    </section>
+
+    <!-- A Few Thoughts Section: New section for additional text content. -->
+    <section class="card thoughts-section">
+      <h2 class="section-title">A Few Thoughts on Our Unbreakable Bond 💭✨</h2>
+      <p>
+        It's truly remarkable how some connections transcend mere family ties and blossom into something profoundly deeper, something akin to a soul kinship. 
+        Our journey together has been a vibrant tapestry woven with threads of shared dreams, whispered secrets, and unwavering support through every twist and turn. 
+        You've been a constant source of inspiration, a guiding light illuminating my path through life's beautiful, yet sometimes labyrinthine, adventures. 🌟
+      </p>
+      <p>
+        Every challenge we've faced, every triumph we've celebrated, has only served to strengthen the invisible yet unbreakable thread that binds our hearts. 
+        The comforting knowledge that you're always there, a steadfast presence in a world of constant change, is a precious gift I cherish beyond measure. 
+        Thank you for being authentically you, in all your wonderful, complex, and brilliant glory. You truly are a gem! 💎
+      </p>
+      <p>
+        Here's to the quiet understanding that passes between us, the unspoken words that convey so much, and the profound joy that defines our unique and extraordinary relationship. 
+        May our story continue to unfold with boundless grace, endless laughter, and an overflowing abundance of love. Cheers to us! 🥂💖
+      </p>
+    </section>
+
+    <!-- Reasons Why I Love You: Interactive flip cards highlighting special qualities. -->
+    <section class="reasons-section">
+      <h2 class="section-title">Why You're So Incredibly Special To Me! ❤️🌟</h2>
+      <div class="reasons-grid">
+        <!-- Reason Cards will be dynamically generated by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Our Little Inside Jokes Section: New section for fun, personal content. -->
+    <section class="card jokes-section">
+      <h2 class="section-title">Our Hilarious Inside Jokes & Quirky Moments 😂🤫</h2>
+      <p>These are the priceless moments that truly define our unique and amazing bond:</p>
+      <ul class="jokes-list">
+        <li>The legendary secret handshake we perfected back in our childhood days! 🤝</li>
+        <li>Remember that epic baking disaster that somehow still tasted surprisingly delicious? 🎂😂</li>
+        <li>Our ingenious code words for making a swift, graceful exit from awkward family gatherings. 🏃‍♀️💨</li>
+        <li>The magical way we can have an entire conversation with just a single look. 👀💬</li>
+        <li>That absolutely ridiculous dance we bust out whenever our favorite song comes on! 💃🕺</li>
+        <li>Our shared, undeniable obsession with [Your Favorite TV Show/Movie/Book Series] – no spoilers! 📺📚</li>
+        <li>Our cherished annual tradition of [Your Holiday/Event Tradition] that we look forward to all year! 🎉🗓️</li>
+        <li>The countless hours we've spent [Your Favorite Activity Together] that always feel like mere minutes. ⏳✨</li>
+        <li>That one phrase only WE understand, leaving everyone else utterly bewildered! 🤪</li>
+      </ul>
+      <p>These little, quirky things are the vibrant threads that weave together the beautiful, irreplaceable tapestry of our sisterhood. So grateful for every single one! 🥰</p>
+    </section>
+
+    <!-- Fun Facts Section: New section for interesting facts about the relationship. -->
+    <section class="card fun-facts-section">
+      <h2 class="section-title">Super Fun Facts About Us! 🥳✨</h2>
+      <div class="fact-item">
+        <strong>First Grand Adventure:</strong> Our very first "big" adventure was when we [describe a specific, memorable event, e.g., got hilariously lost in the mall, built an epic fort that defied gravity, embarked on an unforgettable road trip]. It taught us [lesson learned or funny outcome] and sparked our love for exploration! 🗺️😂
+      </div>
+      <div class="fact-item">
+        <strong>Ultimate Food Duo:</strong> We simply cannot resist the irresistible combination of [specific food, e.g., cheesy pizza and creamy ice cream, Grandma's secret lasagna]. It's our ultimate comfort meal, perfect for any mood or occasion! 🍕🍦
+      </div>
+      <div class="fact-item">
+        <strong>Our Signature Anthem:</strong> The song that instantly makes us think of each other and brings a smile to our faces is [Song Title]. It perfectly captures [reason, e.g., our vibrant energy, a specific cherished memory] and always gets us grooving! 🎶👯‍♀️
+      </div>
+      <div class="fact-item">
+        <strong>Our Secret Superpower:</strong> Did you know we both possess a hidden talent for [talent, e.g., flawlessly impersonating cartoon characters, solving Rubik's cubes in record time, crafting the most terrible yet brilliant puns]? It's our little, quirky superpower that always brings laughter! 🦸‍♀️💫
+      </div>
+      <div class="fact-item">
+        <strong>Our Unofficial Motto:</strong> If we had a motto to live by, it would absolutely be: "[Your shared motto, e.g., 'Always find the fun in everything!', 'Never give up on chocolate, ever!']" It perfectly encapsulates our spirit! 💖 motto
+      </div>
+    </section>
+
+    <!-- Memories Timeline: A chronological display of significant shared moments. -->
+    <section class="memories-section">
+      <h2 class="section-title">Our Incredible Journey Together 🌟🗓️</h2>
+      <div class="timeline">
+        <!-- Timeline items will be dynamically generated by JavaScript -->
+      </div>
+    </section>
+
+    <!-- Favorite Quotes Section: New section for inspirational quotes. -->
+    <section class="card quotes-section">
+      <h2 class="section-title">Heartfelt Quotes on Sisterhood 💖 wisdom</h2>
+      <blockquote>
+        <p>"A sister is a little bit of childhood that can never be lost. She's a treasure chest of memories and a constant source of comfort."</p>
+        <footer></footer>
+      </blockquote>
+      <blockquote>
+        <p>"Sisters function as the ultimate safety nets in a chaotic world, simply by being there for each other, always and forever."</p>
+        <footer></footer>
+      </blockquote>
+      <blockquote>
+        <p>"There is no bond quite like that between sisters. It is a profound connection that transcends time, distance, and every challenge life throws."</p>
+        <footer></footer>
+      </blockquote>
+      <blockquote>
+        <p>"A true sister is someone who is always there for you, through every single thick and thin, every joy and every tear. The rest are just fleeting acquaintances."</p>
+        <footer></footer>
+      </blockquote>
+      <blockquote>
+        <p>"A sister is a gift to the heart, a friend to the spirit, a golden thread to the meaning of life."</p>
+        <footer></footer>
+      </blockquote>
+      <blockquote>
+        <p>"Sisters are like stars. You don't always see them, but you know they're always there."</p>
+        <footer></footer>
+      </blockquote>
+    </section>
+
+    <!-- Future Wishes: A section dedicated to hopes and dreams for the future of the relationship. -->
+    <section class="future-wishes-section">
+      <h2 class="section-title">Wishes for Our Bright Future! ✨🌈</h2>
+      <p class="wish-paragraph">May our incredible bond continue to grow stronger and more beautiful with each passing year, serving as a radiant beacon of love, understanding, and unwavering support. 💖</p>
+      <p class="wish-paragraph">May we share countless more thrilling adventures, bursts of uncontrollable laughter, and unforgettable moments, meticulously weaving an even richer tapestry of cherished memories together. 🗺️😂</p>
+      <p class="wish-paragraph">May all your wildest dreams soar high and come true, and may I always be right by your side to cheer you on, celebrating every single triumph and offering solace and strength through every challenge. You got this! 💪🌟</p>
+      <p class="wish-paragraph">Here's to a future overflowing with boundless happiness, vibrant health, and an endless, unconditional love. It's a magnificent journey we continue to embark on together, hand in hand, heart to heart. Cheers to us! 🥂🥰</p>
+      <div class="signature">With all my love, Your Little Bro 👦❤️</div>
+    </section>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="btn-pink scroll-to-top-btn" title="Go to top">⬆️</button>
+
+    <!-- Dynamic Footer Message: A personalized closing message. -->
+    <footer class="main-footer">
+      <div class="footer-message" id="dynamic-footer-message"></div>
+      <div class="footer-hearts">💖💞🌸💕💗</div>
+    </footer>
+  </main>
+
+  <!-- Removed Pop-up Effect HTML Structure -->
+  <!-- <div id="specialMessagePopup" class="popup-overlay">
+    <div class="popup-content">
+      <h3>A Little Something Extra for You! 🎁</h3>
+      <p>Because you're so special, here's a little pop-up surprise just for you! Hope it brings a smile to your face. 😊</p>
+      <button class="popup-close-btn">Got It! Thanks! 🎉</button>
+    </div>
+  </div> -->
+
+  <script>
+    // --- Utility Functions ---
+    /**
+     * Creates a burst of confetti particles on the screen.
+     * The confetti elements are temporary and removed after a short duration.
+     * Colors are chosen from the muted palette for a mate finish.
+     */
+    function createConfetti() {
+      const confettiCount = 200; // Increased confetti count for more visual impact
+      const container = document.createElement('div');
+      container.classList.add('confetti-container');
+      container.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9998;overflow:hidden;';
+      document.body.appendChild(container);
+
+      const colors = ['var(--primary-pink)', 'var(--secondary-pink)', 'var(--bright-pink)', 'var(--accent-purple)', 'var(--soft-purple)', 'var(--light-blue)', 'var(--light-pink)', 'var(--soft-peach)', 'var(--neon-pink)', 'var(--neon-purple)', 'var(--neon-sky-blue)'];
+
+      for (let i = 0; i < confettiCount; i++) {
+        const confetti = document.createElement('div');
+        confetti.classList.add('confetti');
+        const size = Math.random() * 12 + 6; // Random size between 6px and 18px
+        const shape = Math.random() > 0.5 ? '50%' : '0'; // Mix of circles and squares
+        const color = colors[Math.floor(Math.random() * colors.length)];
+
+        confetti.style.cssText = `
+          position: absolute;
+          background-color: ${color};
+          width: ${size}px;
+          height: ${size}px;
+          border-radius: ${shape};
+          left: ${Math.random() * 100}vw;
+          top: ${-Math.random() * 300}px; /* Start further above viewport */
+          opacity: 0;
+          animation: confettiFall ${5 + Math.random() * 5}s ease-in forwards ${Math.random() * 4}s; /* Longer fall, varied delay */
+          transform: rotateZ(${Math.random() * 720}deg); /* More rotation */
+          box-shadow: 0 0 ${size / 2}px rgba(0,0,0,0.2); /* Softer shadow */
+          will-change: transform, opacity;
+        `;
+        container.appendChild(confetti);
+      }
+      // Remove confetti container after all animations are likely finished
+      setTimeout(() => container.remove(), 12000);
+    }
+
+    /**
+     * Creates a subtle background of floating particles.
+     * Particles are generated once and animated continuously, with soft colors.
+     */
+    function createParticles() {
+      const particleContainer = document.querySelector('.particle-container');
+      const numParticles = 100; // Increased particle count for more density
+
+      for (let i = 0; i < numParticles; i++) {
+        const particle = document.createElement('div');
+        particle.classList.add('particle');
+        const size = Math.random() * 10 + 5; // Varied size between 5px and 15px
+        const opacity = 0.4 + Math.random() * 0.4; // Softer, varied opacity
+        const delay = Math.random() * 25; // Longer delay range
+        const duration = 25 + Math.random() * 20; // Longer duration range
+
+        particle.style.cssText = `
+          width:${size}px;
+          height:${size}px;
+          left:${Math.random() * 100}vw;
+          animation-delay:${delay}s;
+          animation-duration:${duration}s;
+          background-color: rgba(255, 255, 255, ${opacity});
+          box-shadow: 0 0 ${size / 2}px rgba(255, 255, 255, 0.6); /* Stronger glow */
+          will-change: transform, opacity;
+        `;
+        particleContainer.appendChild(particle);
+      }
+    }
+
+    /**
+     * Creates floating heart background animation with jelly/liquid/river flowing effect.
+     */
+    function createFloatingHearts() {
+      const heartContainer = document.querySelector('.heart-container');
+      const numHearts = 8; // REDUCED NUMBER OF HEARTS as requested
+      const heartColors = ['var(--neon-pink)', 'var(--neon-purple)', 'var(--neon-sky-blue)', 'var(--primary-pink)', 'var(--secondary-pink)'];
+      const heartEmojis = ['💖', '💞', '🌸', '💕', '💗'];
+
+      for (let i = 0; i < numHearts; i++) {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+        
+        const size = Math.random() * 1.5 + 1.8; // Size between 1.8rem and 3.3rem
+        const left = Math.random() * 100; // Random horizontal position
+        const delay = Math.random() * 10; // Animation delay
+        const duration = 12 + Math.random() * 8; // Animation duration (12-20s)
+        const color = heartColors[Math.floor(Math.random() * heartColors.length)];
+        const opacity = 0.5 + Math.random() * 0.3; // Varied opacity (0.5-0.8)
+        const xOffset = (Math.random() - 0.5) * 100; // Horizontal drift (-50px to 50px)
+        const scale = 0.8 + Math.random() * 0.4; // Varied scale (0.8 to 1.2)
+
+        heart.style.cssText = `
+          font-size: ${size}rem;
+          left: ${left}vw;
+          animation-delay: ${delay}s;
+          animation-duration: ${duration}s;
+          color: ${color};
+          opacity: ${opacity};
+          text-shadow: 0 0 ${size / 2}px ${color}, 0 0 ${size}px rgba(255, 255, 255, 0.3); /* Glow effect */
+          will-change: transform, opacity;
+          --float-x-offset: ${xOffset}px;
+          --float-scale: ${scale};
+        `;
+        heartContainer.appendChild(heart);
+      }
+    }
+
+    // --- Intersection Observer for Scroll Animations ---
+    /**
+     * Sets up an Intersection Observer to add 'in-view' class to elements
+     * when they enter the viewport, triggering CSS animations. This is optimized
+     * to unobserve elements once they are in view to improve performance.
+     */
+    const observerOptions = { 
+      root: null, 
+      rootMargin: '0px', 
+      threshold: 0.15 // Element is considered 'in-view' when 15% visible
+    };
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) { 
+          entry.target.classList.add('in-view'); 
+          observer.unobserve(entry.target); // Stop observing once in view
+        }
+      });
+    }, observerOptions);
+
+    // --- Lightbox Functionality ---
+    let currentImageIndex = 0;
+    let galleryImages = [];
+
+    /**
+     * Opens the lightbox with the specified image and caption.
+     * @param {string} imgSrc - The source URL of the image to display.
+     * @param {string} captionText - The caption text for the image.
+     * @param {number} index - The index of the image in the gallery.
+     */
+    function openLightbox(imgSrc, captionText, index) {
+      const lightbox = document.getElementById('myLightbox');
+      const lightboxImg = document.getElementById('lightboxImage');
+      const lightboxCaption = document.getElementById('lightboxCaption');
+
+      // Populate galleryImages array if it's empty (first time opening lightbox)
+      if (galleryImages.length === 0) { 
+        galleryImages = Array.from(document.querySelectorAll('.image-grid img')); 
+      }
+      currentImageIndex = index;
+
+      lightbox.style.display = 'block';
+      lightboxImg.src = imgSrc;
+      lightboxCaption.innerHTML = captionText;
+      document.body.style.overflow = 'hidden'; // Prevent scrolling when lightbox is open
+    }
+
+    /**
+     * Closes the lightbox.
+     */
+    function closeLightbox() { 
+      document.getElementById('myLightbox').style.display = 'none'; 
+      document.body.style.overflow = ''; // Restore scrolling
+    }
+
+    /**
+     * Changes the image in the lightbox based on direction (next/previous).
+     * @param {number} direction - -1 for previous, 1 for next.
+     */
+    function changeImage(direction) {
+      currentImageIndex += direction;
+
+      // Loop around if index goes out of bounds
+      if (currentImageIndex < 0) { 
+        currentImageIndex = galleryImages.length - 1; 
+      } else if (currentImageIndex >= galleryImages.length) { 
+        currentImageIndex = 0; 
+      }
+
+      const newImg = galleryImages[currentImageIndex];
+      openLightbox(newImg.src, newImg.alt, currentImageIndex);
+    }
+
+    // --- Dynamic Content Generation ---
+
+    const reasonData = [
+      { icon: '🌟', title: 'Your Bright Spirit', description: 'You always light up the room with your positivity and infectious laughter. It\'s truly inspiring! ✨' },
+      { icon: '🛡️', title: 'Unwavering Support', description: 'Through every challenge, you\'ve been my rock, offering strength and understanding without judgment. 💪' },
+      { icon: '💡', title: 'Your Wisdom', description: 'Your advice is always spot-on, guiding me with clarity and helping me see things from a new perspective. 🧠' },
+      { icon: '😂', title: 'Endless Laughter', description: 'No one makes me laugh as hard as you do! Our inside jokes and silly moments are priceless. 🤣' },
+      { icon: '💖', title: 'Your Loving Heart', description: 'Your kindness and compassion touch everyone around you. You have the biggest heart! ❤️' },
+      { icon: '👯‍♀️', title: 'My Dearest Sister', description: 'More than just family, you\'re my confidante, my partner in crime, and my very best sister. 🤝' },
+      // Removed the following 4 items to reduce the count from 10 to 6
+      // { icon: '✨', title: 'Your Inspiration', description: 'You constantly inspire me to be a better person, to chase my dreams, and to live life to the fullest. 🚀' },
+      // { icon: '🎁', title: 'Simply You!', description: 'Every unique quality, every quirk, every part of you makes you an irreplaceable gift in my life. 💎' },
+      // { icon: '🌈', title: 'Your Unique Perspective', description: 'You see the world in such a beautiful and insightful way, always teaching me something new and wonderful. 🌍✨' },
+      // { icon: '🌸', title: 'Your Gentle Soul', description: 'Your gentle and compassionate nature brings comfort and peace to everyone around you. You are a true blessing. 🌼' }, // Added 10th sticker
+    ];
+
+    function generateReasonCards() {
+      const reasonsGrid = document.querySelector('.reasons-grid');
+      reasonsGrid.innerHTML = ''; // Clear existing content
+
+      reasonData.forEach((data, index) => {
+        const card = document.createElement('div');
+        card.classList.add('reason-card');
+        card.innerHTML = `
+          <div class="card-inner">
+            <div class="card-front">
+              <span class="reason-icon">${data.icon}</span>
+              <h4>${data.title}</h4>
+            </div>
+            <div class="card-back">
+              <p>${data.description}</p>
+            </div>
+          </div>
+        `;
+        reasonsGrid.appendChild(card);
+
+        // Apply staggered animation delay
+        card.style.animationDelay = `${0.2 + index * 0.1}s`;
+        card.addEventListener('click', () => card.classList.toggle('flipped'));
+      });
+    }
+
+    const timelineData = [
+      { title: 'The Day We First Met', description: 'Even if we don\'t remember the exact day, the bond was instant. From sharing toys to sharing dreams, it all started there. A connection forged in childhood, destined to last a lifetime. 👶👧' },
+      { title: 'Our Epic Adventures', description: 'Remember that trip to [Place/Event]? Or that time we [Funny Anecdote]? Those moments are etched in my heart forever. Each adventure, big or small, has added a vibrant chapter to our story. 🗺️🎢' },
+      { title: 'Late Night Talks & Secrets', description: 'The countless hours spent talking, laughing, and sometimes crying, under the stars or just in our room. You\'re my safe space, my confidante, where every secret is safe and every thought understood. 🤫🌌' },
+      { title: 'Always There for Each Other', description: 'Through thick and thin, you\'ve been my unwavering support. Your belief in me has always pushed me forward, and your presence has been a constant source of comfort and strength. 💪💖' },
+      { title: 'Celebrating Milestones', description: 'From graduations to new jobs, and all the personal victories in between, we\'ve celebrated every milestone together. Your joy for my successes is as real as your comfort in my struggles. 🎓🎉' },
+      { title: 'Growing Together', description: 'Watching each other grow, evolve, and overcome challenges has been a privilege. Our bond has matured, becoming richer and deeper with every passing year, a true testament to our sisterhood. 🌱👯‍♀️' },
+      { title: 'Shared Dreams & Aspirations', description: 'The times we\'ve spent dreaming big, planning our futures, and encouraging each other to reach for the stars. Your ambition inspires me, and I love being part of your journey. 🌠✨' },
+      { title: 'Comfort in Silence', description: 'Some of our best moments are spent in comfortable silence, simply enjoying each other\'s company without the need for words. That\'s the mark of a truly deep connection. 🧘‍♀️😌' },
+      { title: 'Learning from Each Other', description: 'You\'ve taught me so much, both directly and by example. Your perspective has broadened my own, and I\'m grateful for every lesson, big or small. 📚💡' },
+      { title: 'Future Adventures Await', description: 'And now, we look forward to all the new memories we\'ll create, the new places we\'ll explore, and the new chapters we\'ll write together. The best is yet to come! 🚀💖' },
+    ];
+
+    function generateTimelineItems() {
+      const timelineContainer = document.querySelector('.timeline');
+      timelineContainer.innerHTML = ''; // Clear existing content
+
+      timelineData.forEach((data, index) => {
+        const item = document.createElement('div');
+        item.classList.add('timeline-item');
+        item.innerHTML = `
+          <div class="timeline-item-content">
+            <h4>${data.title}</h4>
+            <p>${data.description}</p>
+          </div>
+          <div class="timeline-item-dot"></div>
+        `;
+        timelineContainer.appendChild(item);
+        observer.observe(item); // Observe for in-view animation
+      });
+    }
+
+    // --- Main Script Logic ---
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("name-form");
+      const input = document.getElementById("sisterName");
+      const greetingCard = document.getElementById("greeting-message");
+      const mainContent = document.getElementById("main-content");
+      const welcomeBanner = document.getElementById("welcome-banner");
+      const footerMessage = document.getElementById("dynamic-footer-message");
+      const bgm = document.getElementById("bg-music");
+      const preloader = document.getElementById("preloader");
+      const headerDynamicText = document.getElementById("header-dynamic-text");
+      const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+      // Removed specialMessagePopup and popupCloseBtn declarations
+      // const specialMessagePopup = document.getElementById("specialMessagePopup");
+      // const popupCloseBtn = document.querySelector("#specialMessagePopup .popup-close-btn");
+
+      // Preloader Handling: Fades out the preloader once the page content is loaded.
+      window.addEventListener('load', () => { 
+        setTimeout(() => { 
+          preloader.style.opacity = 0; 
+          preloader.style.visibility = 'hidden'; 
+        }, 1500); // 1.5 seconds delay for preloader animation
+      });
+
+      // Dynamic Header Text Animation: Cycles through predefined texts in the header.
+      const headerTexts = ["A Bond Like No Other 💖", "My Forever Sister 👯‍♀️", "Celebrating YOU! 🎉", "Always My Inspiration ✨", "My Soul Sister 🌟", "Unbreakable Connection 🤝"];
+      let textIndex = 0;
+      function updateDynamicHeaderText() {
+        headerDynamicText.style.opacity = 0; // Fade out current text
+        setTimeout(() => { 
+          headerDynamicText.textContent = headerTexts[textIndex]; 
+          headerDynamicText.style.opacity = 1; // Fade in new text
+          textIndex = (textIndex + 1) % headerTexts.length; // Cycle to next text
+        }, 500); // Half second delay for fade out/in
+      }
+      setInterval(updateDynamicHeaderText, 3500); // Update every 3.5 seconds
+      updateDynamicHeaderText(); // Call once immediately to display first text
+
+      // Initial background effects
+      createParticles();
+      createFloatingHearts(); // This will now generate fewer hearts
+
+      // Removed Function to show the pop-up
+      // function showSpecialMessagePopup() {
+      //   specialMessagePopup.style.display = 'flex'; // Use flex to center content
+      //   setTimeout(() => {
+      //     specialMessagePopup.style.opacity = 1;
+      //     specialMessagePopup.querySelector('.popup-content').style.transform = 'scale(1)';
+      //     specialMessagePopup.querySelector('.popup-content').style.opacity = 1;
+      //   }, 50); // Small delay to ensure display property is applied before transition
+      // }
+
+      // Removed Function to hide the pop-up
+      // function hideSpecialMessagePopup() {
+      //   specialMessagePopup.style.opacity = 0;
+      //   specialMessagePopup.querySelector('.popup-content').style.transform = 'scale(0.8)';
+      //   specialMessagePopup.querySelector('.popup-content').style.opacity = 0;
+      //   setTimeout(() => {
+      //     specialMessagePopup.style.display = 'none';
+      //   }, 300); // Match CSS transition duration
+      // }
+
+      // Removed Event listener for pop-up close button
+      // popupCloseBtn.addEventListener('click', hideSpecialMessagePopup);
+      // Also close if clicking outside the content
+      // specialMessagePopup.addEventListener('click', (e) => {
+      //   if (e.target === specialMessagePopup) {
+      //     hideSpecialMessagePopup();
+      //   }
+      // });
+
+
+      // Form Submission Handler: Processes the name input and transitions to main content.
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent default form submission
+        const name = input.value.trim();
+        const lowerCaseName = name.toLowerCase();
+
+        // Validate input name
+        if (!name || lowerCaseName !== 'neha') { // Changed 'kiran' and 'kimi' to 'neha'
+          input.style.animation = 'shake 0.5s'; // Apply shake animation for incorrect input
+          input.addEventListener('animationend', () => { 
+            input.style.animation = ''; // Remove animation after it ends
+            input.value = ''; // Clear input field
+          }, { once: true }); // Ensure listener is removed after one use
+          alert("Oops! That's not quite right. Try again, my dearest sister! 💭😉");
+          return;
+        }
+
+        // Play background music if paused
+        // Autoplay attribute is added to audio tag, but this ensures play on user interaction
+        if (bgm.paused) { 
+          bgm.play().catch(error => {
+            console.error("Autoplay prevented:", error);
+            // Optionally, show a message to the user that music couldn't play automatically
+            // or provide a button to manually start music.
+          }); 
+        }
+        
+        // Trigger confetti effect
+        createConfetti();
+
+        // Animate greeting card out
+        greetingCard.style.opacity = 0;
+        greetingCard.style.transform = 'scale(0.8) translateY(-50px)';
+        
+        setTimeout(() => {
+          greetingCard.style.display = "none"; // Hide greeting card
+          mainContent.style.display = "block"; // Show main content
+
+          // Set initial state for main content before animating in
+          mainContent.style.opacity = 0;
+          mainContent.style.transform = 'translateY(50px) scale(0.9)';
+          
+          setTimeout(() => {
+            // Apply transition properties and final state for main content
+            mainContent.style.transition = 'opacity 1.2s ease-out, transform 1.2s ease-out'; // Slower transition
+            mainContent.style.opacity = 1;
+            mainContent.style.transform = 'translateY(0) scale(1)';
+
+            // Generate dynamic content
+            generateReasonCards();
+            generateTimelineItems();
+
+            // Initialize interactive elements after main content is visible
+            document.querySelectorAll('.img-card img').forEach((img, index) => img.addEventListener('click', () => openLightbox(img.src, img.alt, index)));
+            
+            // Observe elements for scroll animations
+            document.querySelectorAll('.future-wishes-section .wish-paragraph').forEach(item => observer.observe(item));
+            observer.observe(document.querySelector('.future-wishes-section .signature')); // Trigger signature animation
+
+            // Removed showSpecialMessagePopup call
+            // setTimeout(showSpecialMessagePopup, 1500); // Show pop-up 1.5 seconds after main content appears
+
+          }, 100); // Small delay to ensure display:block takes effect before transition
+
+          // Capitalize first letter of the name for display
+          let display_name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+          
+          // Update welcome banner content
+          welcomeBanner.innerHTML = `
+            <div class="heart-icon" aria-hidden="true">💖</div>
+            <h2>To my incredible big sis, ${display_name}! 💖 Happy Sister's Day! 🥳</h2>
+            <p>You're not just family, you're my soul sister and my forever sister. Every moment with you is a treasure! ✨</p>
+            <div class="small-hearts">💕 💞 💓 💗 💘 🌸</div>
+          `;
+          // Update name in main message and footer
+          document.getElementById("main-message-name").textContent = display_name;
+          footerMessage.textContent = `Happy Sister's Day, my dearest ${display_name}! You're simply the best! 🎉👯‍♀️💖`;
+
+        }, 800); // Delay for greeting card fade out
+      });
+
+      // Scroll to Top Button functionality
+      window.addEventListener('scroll', () => {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+          scrollToTopBtn.classList.add('show');
+        } else {
+          scrollToTopBtn.classList.remove('show');
+        }
+      });
+
+      scrollToTopBtn.addEventListener('click', () => {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+      });
+    });
+  </script>
+</body>
+</html>
